@@ -10,9 +10,9 @@ from urllib.parse import urlparse
 import mlflow
 
 
-os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/krishnaik06/machinelearningpipeline.mlflow"
-os.environ['MLFLOW_TRACKING_USERNAME']="krishnaik06"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece0e2adb4e36a250ae3251f"
+os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/Recker-Dev/machine-learning-pipeline.mlflow"
+os.environ['MLFLOW_TRACKING_USERNAME']="Recker-Dev"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="5a116545c06e17b9da861c6ee79dcb79032d2510"
 
 def hyperparameter_tuning(X_train,y_train,param_grid):
     rf=RandomForestClassifier()
@@ -29,7 +29,7 @@ def train(data_path,model_path,random_state,n_estimators,max_depth):
     X=data.drop(columns=["Outcome"])
     y=data['Outcome']
 
-    mlflow.set_tracking_uri("https://dagshub.com/krishnaik06/machinelearningpipeline.mlflow")
+    mlflow.set_tracking_uri("https://dagshub.com/Recker-Dev/machine-learning-pipeline.mlflow")
 
 
     ## start the MLFLOW run
